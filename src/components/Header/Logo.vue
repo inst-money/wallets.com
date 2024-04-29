@@ -1,8 +1,8 @@
 <template>
   <a href="/">
     <div class="left">
-      <img class="logo" src="@/assets/images/beyounger/logo.png" alt="Aclhemy Pay">
-      <span class="name">BEYOUNGER</span>
+      <img class="logo" src="@/assets/images/logo.png" alt="Aclhemy Pay">
+      <span class="name">EASYLOON</span>
     </div>
   </a>
 </template>
