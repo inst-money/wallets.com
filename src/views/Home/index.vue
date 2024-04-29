@@ -1,22 +1,24 @@
 <template>
   <div class="page">
 
-    <!-- <TMP1 /> -->
+
     <div class="bridging-news">
       <!-- <LogoWall></LogoWall> -->
       <div class="bridging">
         <Header />
       </div>
 
-      <TMP2 />
-      <TMP3 />
       <div class="home-bg isLoaded">
         <HomeBg />
         <TopContent />
         <Slide />
       </div>
     </div>
+
     <WorldMap />
+    <TMP1 />
+    <TMP2 />
+    <TMP3 />
     <Crypto />
 
     <RegisterStep v-if="false" />
