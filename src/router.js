@@ -19,28 +19,6 @@ const constantRoutes = [
     path: '/',
     name: 'home',
     component: () => import('@/views/Home/index.vue')
-  },
-  {
-    // shopline callback
-    path: '/callback',
-    name: 'callback',
-    component: () => import('@/views/callback/index.vue')
-  },
-  {
-    // shopline callback
-    path: '/shopline',
-    name: 'shopline',
-    component: () => import('@/views/shopline/index.vue')
-  },
-  {
-    path: '/apple',
-    name: 'apple',
-    component: () => import('@/views/applepay/index.vue')
-  },
-  {
-    path: '/buyerprotection',
-    name: 'feedback',
-    component: () => import('@/views/feedback/index.vue')
   }
 ]
 

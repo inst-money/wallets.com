@@ -480,6 +480,13 @@ export default {
       .charts-right {
         width: 59.58%;
         position: relative;
+        .img-box{
+            width: 100%;
+            display: none;
+            &__show{
+                display: initial;
+            }
+        }
       }
     }
   }
