@@ -1,7 +1,5 @@
 <template>
   <div class="page">
-
-
     <div class="bridging-news">
       <!-- <LogoWall></LogoWall> -->
       <div class="bridging">
