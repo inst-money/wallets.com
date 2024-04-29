@@ -296,7 +296,7 @@ export default {
   },
   methods: {
     toMerchat() {
-      window.location.href = 'http://merchants.beyounger.com/'
+      window.location.href = 'http://merchants.easyloon.com/'
     },
     goHome() {
       // this.$router.push('/');

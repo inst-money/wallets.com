@@ -5,7 +5,7 @@
       <div class="footerContainer">
         <div class="footerLeft">
           <div class="linkBtn">
-            <img src="@/assets/images/beyounger/logo.png" alt="">
+            <img src="@/assets/images/logo.png" alt="">
           </div>
           <div class="tips">© 2023 Beyounger. All rights reserved.</div>
         </div>
