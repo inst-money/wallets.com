@@ -1,0 +1,82 @@
+{
+  "lang": {
+    "title": "US-English"
+  },
+  "nav": {
+    "home": "Home",
+    "security": "security",
+    "products":"Products",
+    "about_us": "About us",
+    "start": "Register",
+    "login": "Sign in",
+    "signup": "Sign up",
+     "contact_us": "Contact us",
+    "title": "Global Acquiring",
+    "desc": "We covers dozens of payment methods in most countries and regions around the world, including international card payments as well as local payment methods such as e-wallet, online bank transfer, etc.,We provides you with different adapted payment methods with multiple transaction and settlement currencies to help your business expand into new markets."
+    ,
+    "products_global_acquiring": "Global Acquiring"
+  },
+  "risk": {
+    "title": "Intelligent Risk Control Engine",
+    "btn": "Learn More",
+    "one": {
+      "title": "Precise Identification of Risky Behaviors  ",
+      "desc": "By leveraging our proprietary risk management system and third-party anti-fraud vendors, we conduct real-time risk scans on user profiles and transaction/behavioral patterns through big data analytics and machine learning. This allows us to accurately identify fraudulent behaviors and prevent fraudulent transactions from happening.      "
+    },
+    "two": {
+      "title": "Customized Risk Control Strategies      ",
+      "desc": "Based on the client's industry and risk perception, we provide customized risk control strategies. By accumulating data and quickly getting familiar with constantly changing fraud patterns, we can help clients tailor risk control strategies in a more precise manner.       "
+    },
+    "three": {
+      "title": "Professional Chargeback Management      ",
+      "desc": "We support diverse chargeback order processing and intelligent chargeback dispute templates to further improve your processing efficiency. We regularly monitor and guide high-risk merchants for rectification to reduce your chargebacks and minimize revenue losses.       "
+    },
+    "four": {
+      "title": "Intelligent Payments  ",
+      "desc": "We optimize conversion rates by providing real-time payment decisions and intelligent 3DS identity verification, minimizing frictions to maximize conversion."
+    }
+  },
+  "contact": {
+    "title": "Contact us for more information and the option that is best for your project today.",
+    "btn": "Contact Us"
+  },
+  "footer": {
+    "products": {
+      "name": "Products",
+      "global_acquiring":"Global Acquiring"
+    },
+    "company": {
+      "name": "Company",
+      "about_us":"About Us"
+    },
+    "resources": {
+      "name": "Resources",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "cookies": "Cookies"
+    }
+  },
+  "map": {
+    "title": "Peerless global coverage",
+    "desc": "We supports fiat from 173 countries, using methods such as Visa, Mastercard, regional mobile wallets, and domestic transfers. Comprehensive coverage in Europe, Northern & Latin America, and Southeast Asia, with a focus on access to emerging markets."
+  },
+  "deploy": {
+    "title": "One Click for Globalization    ",
+    "good01": "Principal member of the world’s 6 largest card schemes",
+    "good02": "Supports local alternative payments in each of the countries PingPong services.    ",
+    "good03": "Cooperation with local card brand in France, Argentina, Brazil"
+  },
+  "use_step": {
+    "title": "ONLY 4 STEPS, EASY TO GET START",
+    "step1": "Register your account",
+    "step2": "Complete onboarding information",
+    "step3": "Technical Integration",
+
+    "step4": "Collecting funds&Withdrawal"
+  },
+  "subscription":{
+    "title":"Subscribe to our newsletter",
+    "desc": "Enter your email to stay informed of updates from Beyounger. You can unsubscribe at any time and your email address will remain confidential.",
+    "btn": "Subscribe"
+  }
+}
