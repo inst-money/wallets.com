@@ -49,6 +49,7 @@ export default {
     }
 
     @media (max-width: 767px) {
+      padding-top: 0px;
       width: calc(100% - 32px);
     }
   }
@@ -56,8 +57,10 @@ export default {
 }
 
 .text-gradient {
-  font-size: 26px;
-  font-size: 60px;
+  @media (max-width: 767px) {
+    font-size: 36px;
+    }
+  font-size: 48px;
   font-weight: bold;
   // --hue: 400;
   // --hue: 500;
@@ -75,6 +78,9 @@ export default {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  &::selection{
+    background: none;
+  }
 }
 
 .p {

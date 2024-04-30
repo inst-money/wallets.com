@@ -1,50 +1,45 @@
 <template>
-  <div class="global-account" data-v-088b8f2a="" data-v-3242de3c="">
-    <div class="container" data-v-088b8f2a="">
-      <h1 class="content-title" data-v-088b8f2a="">一个账户，解锁全球</h1>
-      <div class="show-chart" data-v-088b8f2a="">
+  <div class="global-account">
+    <div class="container">
+      <h1 class="content-title">Multi-currency Wallet</h1>
+      <div class="show-chart">
         <div class="charts-left charts-left-white">
           <ul>
             <li :class="{ active: currentIndex == 0 }" @click="activeIt(0)">
               <div class="icon">
-                <img src="@/assets/global-account/icon1.png" />
+                <img src="@/assets/global-account/wallet.png">
               </div>
               <div class="describe">
-                <h3 class="title">多币种钱包</h3>
-                <h4 data-font="dinRegular" class="subtitle">
-                  Multi-currency Wallet
-                </h4>
+                <h3 class="title">Wallet</h3>
+                <h4 class="subtitle">Multi-currency Wallet</h4>
               </div>
-              <i class="el-icon-arrow-right el-icon-arrow-right-white"></i>
+              <i class="el-icon-arrow-right el-icon-arrow-right-white" />
             </li>
             <li :class="{ active: currentIndex == 1 }" @click="activeIt(1)">
               <div class="icon">
-                <img src="@/assets/global-account/icon2.png" />
+                <img src="@/assets/global-account/exchange-rate.png">
               </div>
               <div class="describe">
-                <h3 class="title">汇率管理</h3>
-                <h4 data-font="dinRegular" class="subtitle">FX Management</h4>
+                <h3 class="title">FX</h3>
+                <h4 class="subtitle">FX Management</h4>
               </div>
-              <i class="el-icon-arrow-right el-icon-arrow-right-white"></i>
+              <i class="el-icon-arrow-right el-icon-arrow-right-white" />
             </li>
           </ul>
-          <h3 class="detail-title">多币种钱包</h3>
-          <p data-font="dinRegular" class="detail">
-            无论客户从事国际化的电商平台业务、独立站业务、数字化文娱类等业务，还是希望进行<span>收款、付款、汇兑</span>，只需一个<span
-              >“PHOTONPAY MULTI-CURRENCY WALLET”</span
-            >，
-            全球生意皆可一手掌控，无需再忍受银行繁杂的业务流程及高昂的手续费用。
+          <h3 class="detail-title">{{ currentDesc.title }}</h3>
+          <p class="detail">
+            {{ currentDesc.desc }}
           </p>
         </div>
         <div class="charts-right">
           <div class="img-box" :class="{ 'img-box__show': currentIndex == 0 }">
             <div class="rise-up">
-              <img src="@/assets/global-account/demo1.png" />
+              <img src="@/assets/global-account/demo1.png">
             </div>
           </div>
           <div class="img-box" :class="{ 'img-box__show': currentIndex == 1 }">
             <div class="rise-up">
-              <img src="@/assets/global-account/demo2.png" />
+              <img src="@/assets/global-account/demo2.png">
             </div>
           </div>
         </div>
@@ -55,19 +50,36 @@
 
 <script>
 export default {
-  name: "TMP2",
+  name: 'TMP2',
   data() {
     return {
       imgBoxList: [],
       currentIndex: 0,
-    };
+      descList: [
+        {
+          key: 0,
+          title: 'Multi-currency Wallet',
+          desc: `We helps you avoid costly international bank or wire transfers, or a multi-step process of withdrawing, converting, and redepositing the payment. It’s all about making sure you have the currency you need when your business needs it the most.`
+        },
+        {
+          key: 1,
+          title: 'FX Management',
+          desc: 'You can get competitive foreign exchange rates from us to better manage your forex transactions.'
+        }
+      ]
+    }
+  },
+  computed: {
+    currentDesc() {
+      return this.descList.find((item) => item.key === this.currentIndex) || {}
+    }
   },
   methods: {
     activeIt(index) {
-      this.currentIndex = index;
-    },
-  },
-};
+      this.currentIndex = index
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -81,7 +93,7 @@ export default {
     max-width: 1200px;
     .content-title {
       margin-bottom: 40px;
-      font-size: 70px;
+      font-size: 60px;
       font-weight: 600;
       color: #19191e;
       line-height: 75px;
@@ -98,24 +110,24 @@ export default {
           ul {
             li {
               background: #fff;
-              &.active{
-                .describe{
-                .title {
+              &.active {
+                .describe {
+                  .title {
                     color: #fff;
-                }
-                .subtitle{
+                  }
+                  .subtitle {
                     color: #fff;
+                  }
                 }
               }
-              }
-              .describe{
+              .describe {
                 .title {
-                    color: #212121;
+                  color: #212121;
                 }
-                .subtitle{
-                    font-size: 14px;
-                    color: #9b9b9b;
-                    line-height: 18px;
+                .subtitle {
+                  font-size: 14px;
+                  color: #9b9b9b;
+                  line-height: 18px;
                 }
               }
             }
@@ -123,8 +135,8 @@ export default {
         }
         ul {
           width: 100%;
-          margin-left:0;
-          padding-left:0;
+          margin-left: 0;
+          padding-left: 0;
           display: flex;
           justify-content: flex-start;
           flex-direction: column;
@@ -218,6 +230,87 @@ export default {
                   top: 0;
                   z-index: 1;
                   height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .global-account {
+    padding-top: 46px;
+    padding-bottom: 42px;
+    min-height: 790px;
+    box-sizing: border-box;
+
+    .container {
+      padding: 0 6.66vw;
+      .content-title {
+        margin-bottom: 33px;
+      }
+
+      .show-chart {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .charts-left {
+          width: 100%;
+          &.charts-left-white {
+            ul {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: row;
+              flex-wrap: wrap;
+              li {
+                width: 48%;
+                height: 40px;
+                margin-bottom: 10px;
+
+                &.active {
+                }
+                .icon {
+                  width: 30px;
+                  height: 30px;
+                  margin-left: 8px;
+                  flex-shrink: 0;
+                }
+                .describe {
+                  font-size: 14px;
+                  margin-left: 10px;
+                  .title {
+                  }
+                  .subtitle {
+                    display: none;
+                  }
+                  .el-icon-arrow-right {
+                  }
+                }
+              }
+            }
+            .detail-title {
+            }
+            p.detail {
+            }
+          }
+        }
+
+        .charts-right {
+          width: 100%;
+          margin-top: 21px;
+          .img-box {
+            &__show {
+              display: initial;
+              .rise-up {
+                img {
+                }
+                &.chartPayments-box {
+                  img {
+                  }
                 }
               }
             }

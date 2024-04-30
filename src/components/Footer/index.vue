@@ -7,7 +7,7 @@
           <div class="linkBtn">
             <img src="@/assets/images/logo.png" alt="">
           </div>
-          <div class="tips">© 2023 Beyounger. All rights reserved.</div>
+          <div class="tips">© 2024 Easyloon. All rights reserved.</div>
         </div>
         <div class="footerRight">
           <a href="#" target="_blank">

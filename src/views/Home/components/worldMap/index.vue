@@ -3,7 +3,7 @@
     <div id="rightTwoCharts">
       <div class="top-banner">
         <div class="title">{{ $t("map.title") }}</div>
-        <div class="info">{{ $t("map.desc") }}</div>
+        <!-- <div class="info">{{ $t("map.desc") }}</div> -->
       </div>
       <div id="demoMap" ref="demoMap" />
       <numberAnimate />
@@ -101,10 +101,8 @@ export default {
                       <div  class="text">${params.name}</div>  
                     </div>
                     <div class="pay"> 
-                      <div  class="bank">   <img   class="bank1" src='${bank1}'/></div>
-                      <div  class="bank">   <img class="bank2" src='${bank2}'/> </div>
-                    
-                     
+
+                                     
                   </div>
                     </div>`
                 ].join('<br>')
@@ -206,7 +204,8 @@ export default {
       line-height: 53px;
       text-align: center;
       color: #13151a;
-      margin-bottom: 24px;
+      margin-bottom: 84px;
+
     }
 
     .info {

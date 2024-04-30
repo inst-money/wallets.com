@@ -7,7 +7,11 @@
         <a
           href="javascript:void(0);"
           @click="handlePaymentsMenuClick('#')"
-        >{{ $t("footer.products.global_acquiring") }}</a>
+        >{{ $t("footer.products.global_acquiring1") }}</a>
+        <a
+          href="javascript:void(0);"
+          @click="handlePaymentsMenuClick('#')"
+        >{{ $t("footer.products.global_acquiring2") }}</a>
       </div>
     </div>
     <div class="container_l">
