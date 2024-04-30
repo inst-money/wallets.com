@@ -44,7 +44,7 @@
                   class="down_icon"
                   src="@/assets/pre/down_icon.svg"
                   alt=""
-                />
+                >
               </a>
               <template #content>
                 <div class="tag-content tag-content-row">
@@ -92,12 +92,12 @@
 
           <a-dropdown v-if="isLogin">
             <a @click="(e) => e.preventDefault()">
-              <img class="portraitSty" src="@/assets/pre/ellipse5.svg" />
+              <img class="portraitSty" src="@/assets/pre/ellipse5.svg">
             </a>
             <a-menu slot="overlay" @click="handleRightClick">
               <a-menu-item key="my">
                 <div class="nav-menu-item-container">
-                  <img class="buy-crypto-img" src="@/assets/pre/ellipse5.svg" />
+                  <img class="buy-crypto-img" src="@/assets/pre/ellipse5.svg">
                   <div class="nav-menu-item-right">
                     <h4>Dashboard</h4>
                     <span>Personal Center</span>
@@ -110,7 +110,7 @@
                     class="buy-crypto-img"
                     src="@/assets/pre/login.svg"
                     alt="third party"
-                  />
+                  >
                   <div class="nav-menu-item-right">
                     <h4>Sign Out</h4>
                     <span> Sign Out Your Account</span>
@@ -128,13 +128,13 @@
                   alt="us"
                   src="@/assets/images/squareflag/US.png"
                   class="flag"
-                />
+                >
                 <img
                   v-if="lang === 'zh'"
                   alt="cn"
                   src="@/assets/images/squareflag/CN.png"
                   class="flag"
-                />
+                >
                 {{ $t("lang.title") }}
                 <a-icon type="caret-down" />
               </div>
@@ -145,7 +145,7 @@
                       src="@/assets/images/squareflag/CN.png"
                       alt=""
                       class="flag"
-                    />
+                    >
                     CN - 简体中文
                   </a-menu-item>
                   <a-menu-item key="en">
@@ -153,7 +153,7 @@
                       src="@/assets/images/squareflag/US.png"
                       alt=""
                       class="flag"
-                    />
+                    >
                     US - English
                   </a-menu-item>
                 </a-menu>
@@ -201,9 +201,11 @@
             Forget your password?
           </a>
         </div>
-        <a-button class="goToBtn" :loading="loginLoading" @click="loginCLick()"
-          >Login</a-button
-        >
+        <a-button
+          class="goToBtn"
+          :loading="loginLoading"
+          @click="loginCLick()"
+        >Login</a-button>
         <div
           :style="{
             position: 'absolute',
@@ -324,7 +326,7 @@
         </div>
       </a-modal>
     </div>
-    <div class="mobile-laceholder"></div>
+    <div class="mobile-laceholder" />
     <div class="mobile-nav-header" :class="{ bg }">
       <div class="g-container wrapper">
         <Logo />
@@ -343,72 +345,72 @@
 </template>
 
 <script>
-import BigNumber from "bignumber.js";
+import BigNumber from 'bignumber.js'
 // import { login, submitChangePassword, getGaStatus } from '@/api/index';
-import ButtonCreate from "./ButtonCreate.vue";
-import Logo from "./Logo.vue";
-import LinkBox from "./LinkBox.vue";
+import ButtonCreate from './ButtonCreate.vue'
+import Logo from './Logo.vue'
+import LinkBox from './LinkBox.vue'
 
 export default {
-  name: "NavHeader",
+  name: 'NavHeader',
   // eslint-disable-next-line vue/no-unused-components
   components: { LinkBox, ButtonCreate, Logo },
   props: {
     nav: {
       type: Boolean,
       require: false,
-      default: false,
-    },
+      default: false
+    }
   },
   data() {
     return {
-      form: this.$form.createForm(this, { name: "changePasswordForm" }),
+      form: this.$form.createForm(this, { name: 'changePasswordForm' }),
       verifyGoogleAuthForm: this.$form.createForm(this, {
-        name: "verifyGoogleAuthFormName",
+        name: 'verifyGoogleAuthFormName'
       }),
       bg: false,
       drawerVisible: false,
       drawerChangePasswordVisible: false,
       isLogin: false,
       loginLoading: false,
-      localStorageMail: "",
-      mail: "",
-      password: "",
+      localStorageMail: '',
+      mail: '',
+      password: '',
       verifyGoogleVisible: false,
       verifyParams: {},
       isPer: false,
       isBus: false,
       isPro: false,
-      isBrd: false,
-    };
+      isBrd: false
+    }
   },
   computed: {
     lang() {
-      const lang = this.$i18n.locale;
-      return lang;
-    },
+      const lang = this.$i18n.locale
+      return lang
+    }
   },
   created() {
-    if (localStorage.getItem("Our_money_access_token")) {
-      this.isLogin = true;
-      this.localStorageMail = localStorage.getItem("Our_mail");
+    if (localStorage.getItem('Our_money_access_token')) {
+      this.isLogin = true
+      this.localStorageMail = localStorage.getItem('Our_mail')
     }
     if (this.nav) {
-      this.bg = true;
+      this.bg = true
     }
-    if (this.$route.path === "/" || this.$route.path === "/register") {
-      this.isPer = true;
-    } else if (this.$route.path === "/business") {
-      this.isBus = true;
+    if (this.$route.path === '/' || this.$route.path === '/register') {
+      this.isPer = true
+    } else if (this.$route.path === '/business') {
+      this.isBus = true
     } else if (
-      this.$route.path === "/brand" ||
-      this.$route.path === "/business-solutions" ||
-      this.$route.path === "/about" ||
-      this.$route.path === "/contact-sales"
+      this.$route.path === '/brand' ||
+      this.$route.path === '/business-solutions' ||
+      this.$route.path === '/about' ||
+      this.$route.path === '/contact-sales'
     ) {
-      this.isBrd = true;
+      this.isBrd = true
     } else {
-      this.isPro = true;
+      this.isPro = true
     }
   },
   mounted() {
@@ -419,7 +421,7 @@ export default {
   },
   methods: {
     toMerchat() {
-      window.location.href = "http://merchants.easyloon.com/";
+      window.location.href = 'http://merchants.easyloon.com/'
     },
     goHome() {
       // this.$router.push('/');
@@ -428,170 +430,170 @@ export default {
       // this.$router.push('/business');
     },
     mailChange(e) {
-      this.mail = e.target.value;
+      this.mail = e.target.value
     },
     passwordChange(e) {
-      this.password = e.target.value;
+      this.password = e.target.value
     },
     handleSubmit(e) {
-      e.preventDefault();
+      e.preventDefault()
     },
     handleConfirmBlur(e) {
-      const { value } = e.target;
-      this.confirmDirty = this.confirmDirty || !!value;
+      const { value } = e.target
+      this.confirmDirty = this.confirmDirty || !!value
     },
     compareToFirstPassword(rule, value, callback) {
-      const { form } = this;
-      if (value && value !== form.getFieldValue("password")) {
-        callback("Two passwords that you enter is inconsistent!");
+      const { form } = this
+      if (value && value !== form.getFieldValue('password')) {
+        callback('Two passwords that you enter is inconsistent!')
       } else {
-        callback();
+        callback()
       }
     },
     validateToNextPassword(rule, value, callback) {
-      const { form } = this;
+      const { form } = this
       if (value && this.confirmDirty) {
-        form.validateFields(["confirm"], { force: true });
+        form.validateFields(['confirm'], { force: true })
       }
-      callback();
+      callback()
     },
     handleScroll() {
-      let top = document.documentElement.scrollTop || document.body.scrollTop;
+      let top = document.documentElement.scrollTop || document.body.scrollTop
       if (top > 100) {
-        top = 100;
+        top = 100
       }
-      document.getElementById("headerLogoImg").style.height = `${BigNumber(
+      document.getElementById('headerLogoImg').style.height = `${BigNumber(
         1 - BigNumber(top).dividedBy(100).dividedBy(4).toFixed(2)
       )
         .multipliedBy(48)
-        .toFixed(0)}px`;
+        .toFixed(0)}px`
       Array.prototype.forEach.call(
-        document.getElementsByClassName("headerTopText"),
+        document.getElementsByClassName('headerTopText'),
         (element) => {
           // eslint-disable-next-line no-param-reassign
           element.style.fontSize = `${BigNumber(
             1 - BigNumber(top).dividedBy(100).dividedBy(8).toFixed(2)
           )
             .multipliedBy(16)
-            .toFixed(0)}px`;
+            .toFixed(0)}px`
         }
-      );
-      this.bg = top !== 0;
+      )
+      this.bg = top !== 0
     },
     handleOnlineClick() {
-      this.$router.push("/onlinePayment");
+      this.$router.push('/onlinePayment')
     },
     handleLangMenuClick(e) {
-      const { key } = e;
-      this.$i18n.locale = key;
-      localStorage.setItem("locale", key);
+      const { key } = e
+      this.$i18n.locale = key
+      localStorage.setItem('locale', key)
     },
     handleMenuClick(e) {
       switch (e.key) {
-        case "business-solutions":
-          this.$router.push("/business-solutions");
-          break;
+        case 'business-solutions':
+          this.$router.push('/business-solutions')
+          break
         default:
-          break;
+          break
       }
     },
     handleRightClick(e) {
       switch (e.key) {
-        case "my":
-          this.$router.push("/my");
-          break;
-        case "kyc-card":
+        case 'my':
+          this.$router.push('/my')
+          break
+        case 'kyc-card':
           this.$router.push({
-            path: "/my",
+            path: '/my',
             query: {
-              tab: "fastBuy",
-            },
-          });
-          break;
-        case "card":
+              tab: 'fastBuy'
+            }
+          })
+          break
+        case 'card':
           this.$router.push({
-            path: "/my",
+            path: '/my',
             query: {
-              tab: "myCard",
-            },
-          });
-          break;
-        case "kyc":
+              tab: 'myCard'
+            }
+          })
+          break
+        case 'kyc':
           this.$router.push({
-            path: "/my",
+            path: '/my',
             query: {
-              tab: "identification",
-            },
-          });
-          break;
-        case "changePassword":
-          this.drawerChangePasswordVisible = true;
-          break;
-        case "loginOut":
-          localStorage.clear();
-          if (this.$route.path === "/") {
-            this.$router.go(0);
+              tab: 'identification'
+            }
+          })
+          break
+        case 'changePassword':
+          this.drawerChangePasswordVisible = true
+          break
+        case 'loginOut':
+          localStorage.clear()
+          if (this.$route.path === '/') {
+            this.$router.go(0)
           } else {
-            this.$router.push("/");
+            this.$router.push('/')
           }
-          break;
+          break
         default:
-          break;
+          break
       }
     },
     handleBuyClick() {
-      if (this.$route.path === "/") {
-        document.querySelector("#card-container").scrollIntoView({
-          behavior: "smooth",
-        });
+      if (this.$route.path === '/') {
+        document.querySelector('#card-container').scrollIntoView({
+          behavior: 'smooth'
+        })
       } else {
         this.$router.push({
-          path: "/",
+          path: '/',
           query: {
-            goOurContainer: true,
-          },
-        });
+            goOurContainer: true
+          }
+        })
       }
     },
     showDrawer() {
-      this.drawerVisible = true;
+      this.drawerVisible = true
     },
     onClose() {
-      this.drawerVisible = false;
+      this.drawerVisible = false
     },
     onChangePasswordClose() {
-      this.drawerChangePasswordVisible = false;
+      this.drawerChangePasswordVisible = false
     },
     submitLogin() {
-      this.loginLoading = true;
+      this.loginLoading = true
     },
     loginCLick() {
       if (!this.mail) {
-        this.$message.error("Please enter email");
+        this.$message.error('Please enter email')
       } else if (!this.password) {
-        this.$message.error("Please enter your password");
+        this.$message.error('Please enter your password')
       }
     },
     handleVerifyGoogleSubmit() {
-      const { verifyParams } = this;
+      const { verifyParams } = this
       this.verifyGoogleAuthForm.validateFields((err, values) => {
         if (!err) {
           const params = {
             ...verifyParams,
-            "ga-code": values.google_code,
-          };
-          this.submitLogin(params);
+            'ga-code': values.google_code
+          }
+          this.submitLogin(params)
         }
-      });
+      })
     },
     registerCLick() {
-      this.$router.push("/register");
+      this.$router.push('/register')
     },
     resetPasswordClick() {
-      this.$router.push("/resetPassword");
-    },
-  },
-};
+      this.$router.push('/resetPassword')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

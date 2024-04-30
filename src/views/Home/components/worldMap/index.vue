@@ -11,85 +11,85 @@
   </div>
 </template>
 <script>
-import * as echarts from "echarts";
-import bank1 from "@/assets/images/bank1.png";
-import bank2 from "@/assets/images/bank2.png";
-import worldJson from "./worldMap.json";
-import { selectedWorldData } from "./worldData";
-import numberAnimate from "../numberAnimate/index.vue";
+import * as echarts from 'echarts'
+import bank1 from '@/assets/images/bank1.png'
+import bank2 from '@/assets/images/bank2.png'
+import worldJson from './worldMap.json'
+import { selectedWorldData } from './worldData'
+import numberAnimate from '../numberAnimate/index.vue'
 
 export default {
-  name: "Demo",
+  name: 'Demo',
   components: {
-    numberAnimate,
+    numberAnimate
   },
   data() {
     return {
-      insertHeight: "",
-    };
+      insertHeight: ''
+    }
   },
   mounted() {
     // this.$refs.demoMap.style.height = `${window.innerHeight - 200}px`;
-    this.map();
+    this.map()
   },
   beforeDestroy() {
-    window.removeEventListener("resize", () => {
-      this.resize();
-    });
+    window.removeEventListener('resize', () => {
+      this.resize()
+    })
   },
 
   methods: {
     resize() {
-      this.myChart.resize();
+      this.myChart.resize()
     },
     //  全球地图生成方法
     map() {
-      const chartDom = document.getElementById("demoMap");
+      const chartDom = document.getElementById('demoMap')
       const myChart = echarts.init(chartDom, null, {
-        renderer: "svg",
-      });
+        renderer: 'svg'
+      })
 
-      this.myChart = myChart;
-      window.addEventListener("resize", () => {
-        this.resize();
-      });
-      let option = {};
-      echarts.registerMap("WORLD", worldJson, {});
+      this.myChart = myChart
+      window.addEventListener('resize', () => {
+        this.resize()
+      })
+      let option = {}
+      echarts.registerMap('WORLD', worldJson, {})
       option = {
         tooltip: {},
         dataRange: {
           show: false, //  调色板显示与否
           min: 0,
           max: 1,
-          text: ["Low", "High"],
+          text: ['Low', 'High'],
           realtime: false,
           calculable: false,
           // color: ['#72a0e3', '#ebeef4'], //  生成地图颜色以及发散点颜色
-          color: ["#72a0e3", "#ebeef4"], //  生成地图颜色以及发散点颜色
+          color: ['#72a0e3', '#ebeef4'] //  生成地图颜色以及发散点颜色
         },
         geo: {
           show: false,
-          type: "map",
+          type: 'map',
           aspectScale: 1, // 横向拉伸
           // roam: true, // 地图操作 开启缩放或者平移，可以设置成 'scale' 或者 'move'。
-          map: "WORLD",
-          mapType: "world",
+          map: 'WORLD',
+          mapType: 'world'
         },
         series: [
           {
-            type: "map",
-            mapType: "WORLD",
+            type: 'map',
+            mapType: 'WORLD',
             zoom: 1.25,
-            nameProperty: "name",
+            nameProperty: 'name',
             tooltip: {
-              trigger: "item",
+              trigger: 'item',
               formatter(params) {
                 if (!params.data || !params.data.selected) {
-                  return "";
+                  return ''
                 }
                 const imgLogo = params?.data?.logo
                   ? ` <img   class="flag" src='${params?.data?.logo}'>`
-                  : "";
+                  : ''
                 return [
                   `<div style="" class="bank-box" >  
 
@@ -102,18 +102,18 @@ export default {
 
                                      
                   </div>
-                    </div>`,
-                ].join("<br>");
+                    </div>`
+                ].join('<br>')
               },
               borderWidth: 0.5,
-              borderColor: "#ffffff",
-              backgroundColor: "#ffffff",
-              extraCssText: "box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.14)",
+              borderColor: '#ffffff',
+              backgroundColor: '#ffffff',
+              extraCssText: 'box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.14)',
               borderRadius: 16,
               textStyle: {
-                color: "#13151A",
-                fontSize: 12,
-              },
+                color: '#13151A',
+                fontSize: 12
+              }
             },
             selectedMode: false,
             label: {
@@ -121,29 +121,29 @@ export default {
               normal: {
                 show: false, // 默认地图文字字号和字体颜色
                 fontSize: 10,
-                color: "#ffffff",
+                color: '#ffffff'
               },
               emphasis: {
                 show: false,
                 fontSize: 10, // 选中地图文字字号和字体颜色
-                color: "#CFCFCF",
-              },
+                color: '#CFCFCF'
+              }
             },
             itemStyle: {
               normal: {
-                areaColor: "#ebeef4", // 地图本身的颜色
-                borderColor: "#fff", // 省份边框颜色
+                areaColor: '#ebeef4', // 地图本身的颜色
+                borderColor: '#fff', // 省份边框颜色
                 borderWidth: 1, // 省份边框宽度
-                opacity: 1, // 图形透明度
+                opacity: 1 // 图形透明度
               },
               emphasis: {
-                areaColor: "#0b48e6", // 高亮时候地图显示的颜色
-                borderWidth: 1, // 高亮时的边框宽度
+                areaColor: '#0b48e6', // 高亮时候地图显示的颜色
+                borderWidth: 1 // 高亮时的边框宽度
               },
               select: {
-                areaColor: "#72a0e3", // 高亮时候地图显示的颜色
-                borderWidth: 1, // 2
-              },
+                areaColor: '#72a0e3', // 高亮时候地图显示的颜色
+                borderWidth: 1 // 2
+              }
             },
             // mapLocation: {
             //   y: 100
@@ -153,22 +153,22 @@ export default {
             // },
             // 对应生成地图颜色板块数据
             textFixed: {
-              Alaska: [20, -20],
+              Alaska: [20, -20]
             },
             select: {
               itemStyle: {
-                areaColor: "#72a0e3",
+                areaColor: '#72a0e3'
               },
-              label: false,
+              label: false
             },
-            data: selectedWorldData,
-          },
-        ],
-      };
-      myChart.setOption(option);
-    },
-  },
-};
+            data: selectedWorldData
+          }
+        ]
+      }
+      myChart.setOption(option)
+    }
+  }
+}
 </script>
 
 <style lang="scss">
