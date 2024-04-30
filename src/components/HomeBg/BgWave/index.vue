@@ -38,7 +38,7 @@
     /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #8200c9 0%, #11e8bb 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #8200c9 0%, #11e8bb 100%);
+    background: linear-gradient(to left top, #8200c9 10%, #11e8bb 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8200c9', endColorstr='#11e8bb', GradientType=0);
     /* IE6-9 */

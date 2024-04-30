@@ -1,74 +1,40 @@
 <template>
   <div class="global-payment">
     <div class="container">
-      <h1 class="content-title">全球支付</h1>
+      <h1 class="content-title">Global Pay</h1>
       <div class="show-chart">
         <div class="charts-left">
           <ul>
-            <li :class="{ active: currentIndex == 0 }" @click="activeIt(0)">
-              <div class="icon">
-                <img src="@/assets/global-payment/icon1.png">
-              </div>
-              <div class="describe">
-                <h3 class="title">全球收单</h3>
-                <h4 data-font="dinRegular" class="subtitle">Online Payments</h4>
-              </div>
-              <i class="el-icon-arrow-right" />
-            </li>
             <li :class="{ active: currentIndex == 1 }" @click="activeIt(1)">
               <div class="icon">
-                <img src="@/assets/global-payment/icon2.png">
+                <img src="@/assets/global-payment/shopping-cart.png">
               </div>
               <div class="describe">
-                <h3 class="title">全球收款</h3>
-                <h4 data-font="dinRegular" class="subtitle">
+                <h3 class="title">Collections</h3>
+                <h4 class="subtitle">
                   Cross-border Collections
-                </h4>
-              </div>
-              <i class="el-icon-arrow-right" />
-            </li>
-            <li :class="{ active: currentIndex == 2 }" @click="activeIt(2)">
-              <div class="icon">
-                <img src="@/assets/global-payment/icon3.png">
-              </div>
-              <div class="describe">
-                <h3 class="title">全球发卡</h3>
-                <h4 data-font="dinRegular" class="subtitle">
-                  Virtual Payment Cards
                 </h4>
               </div>
               <i class="el-icon-arrow-right" />
             </li>
             <li :class="{ active: currentIndex == 3 }" @click="activeIt(3)">
               <div class="icon">
-                <img src="@/assets/global-payment/icon4.png">
+                <img src="@/assets/global-payment/money.png">
               </div>
               <div class="describe">
-                <h3 class="title">全球付款</h3>
-                <h4 data-font="dinRegular" class="subtitle">Global Payouts</h4>
+                <h3 class="title">Payouts</h3>
+                <h4 class="subtitle">Global Payouts</h4>
               </div>
               <i class="el-icon-arrow-right" />
             </li>
           </ul>
-          <h3 class="detail-title">全球收单</h3>
-          <p data-font="dinRegular" class="detail">
-            涵盖全球主流国家和地区多达几十种支付方式，无论是<span>国际卡支付</span>还是深入本地的多样支付方式如<span>电子钱包、网银转账</span>等，为您扩展新市场提供所匹配的支付工具。提供多样的交易&amp;结算币种，提高支付转化率、助力业务增长。
-          </p>
+          <h3 class="detail-title">{{ currentDesc.title }}</h3>
+          <p class="detail">{{ currentDesc.desc }}</p>
         </div>
         <div class="charts-right">
-          <div class="img-box" :class="{ 'img-box__show': currentIndex == 0 }" style="">
-            <div class="rise-up">
-              <img src="@/assets/global-payment/demo1.png">
-            </div>
-          </div>
           <div class="img-box" :class="{ 'img-box__show': currentIndex == 1 }">
             <div class="rise-up">
               <img src="@/assets/global-payment/demo2.png">
-            </div>
-          </div>
-          <div class="img-box" :class="{ 'img-box__show': currentIndex == 2 }">
-            <div class="rise-up">
-              <img src="@/assets/global-payment/demo3.png">
             </div>
           </div>
           <div class="img-box" :class="{ 'img-box__show': currentIndex == 3 }">
@@ -88,7 +54,25 @@ export default {
   data() {
     return {
       imgBoxList: [],
-      currentIndex: 0
+      currentIndex: 1,
+      descList: [
+        {
+          key: 1,
+          title: 'Cross-border Collections',
+          desc: '跨境电商平台收款，一站式解决。Easyloon支持80%主流平台及币种，多币种多平台多店铺，一站式管理，化零为整。'
+        },
+        {
+          key: 3,
+          title: 'Global Payouts',
+          desc: 'Easyloon充分运用国际金融技术及科技能力形成强大的支付网络，遍布全球150+国家及地区。使用Easyloon付款产品可以让您快速安全地向全球供应商、代理商或服务商等全球各地的交易方支付款项；让您无论何时何地，无缝链接当地清算网络，支持B2C/B2B，最快可支持实时到账。'
+        }
+
+      ]
+    }
+  },
+  computed: {
+    currentDesc() {
+      return this.descList.find(item => item.key === this.currentIndex) || {}
     }
   },
   methods: {
@@ -100,6 +84,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .global-payment {
   background: #19191e;
   padding-bottom: 115px;
@@ -111,7 +96,7 @@ export default {
     max-width: 1200px;
     .content-title {
       margin-bottom: 40px;
-      font-size: 70px;
+      font-size: 50px;
       font-weight: 600;
       color: #fff;
       line-height: 75px;
@@ -126,6 +111,7 @@ export default {
         width: 34.58%;
         ul {
           width: 100%;
+          padding-left: 0;
           li {
             &.active {
               background: #4c389d;
@@ -178,6 +164,7 @@ export default {
           }
         }
         .detail-title {
+          margin-top: 40px;
           font-size: 20px;
           font-weight: 600;
           color: hsla(0, 0%, 100%, 0.86);
@@ -234,6 +221,84 @@ export default {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .global-payment {
+    padding-top: 46px;
+    padding-bottom: 42px;
+    min-height: 790px;
+    box-sizing: border-box;
+
+    .container {
+      padding: 0 6.66vw;
+      .content-title {
+        margin-bottom: 33px;
+      }
+
+      .show-chart {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .charts-left {
+          width: 100%;
+          ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li {
+              width: 50%;
+              height: 40px;
+              margin-bottom: 10px;
+              &.active {
+              }
+              .icon {
+                width: 30px;
+                height: 30px;
+                margin-left: 8px;
+                flex-shrink: 0;
+              }
+              .describe {
+                font-size: 14px;
+                margin-left: 10px;
+                .title {
+                  font-size: 12px;
+                }
+                .subtitle {
+                  display: none;
+                }
+                .el-icon-arrow-right {
+                }
+              }
+            }
+          }
+          .detail-title {
+          }
+          p.detail {
+          }
+        }
+
+        .charts-right {
+          width: 100%;
+          margin-top: 21px;
+          .img-box {
+            &__show {
+              display: initial;
+              .rise-up {
+                img {
+                }
+                &.chartPayments-box {
+                  img {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>

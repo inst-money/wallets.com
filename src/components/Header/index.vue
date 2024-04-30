@@ -63,7 +63,7 @@
             </a-menu-item>
           </a-menu>
         </a-dropdown>
-        <div v-if="!isLogin" class="right-lang">
+        <div v-if="!isLogin&&false" class="right-lang">
           <a-dropdown>
             <div class="inner">
               <!-- <span class="lang">{{lang}}</span> <a-icon type="global" /> -->

@@ -49,6 +49,7 @@ export default {
     }
 
     @media (max-width: 767px) {
+      padding-top: 0px;
       width: calc(100% - 32px);
     }
   }
@@ -75,6 +76,9 @@ export default {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  &::selection{
+    background: none;
+  }
 }
 
 .p {

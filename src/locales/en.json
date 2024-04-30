@@ -13,8 +13,7 @@
      "contact_us": "Contact us",
     "title": "Global Acquiring",
     "desc": "We covers dozens of payment methods in most countries and regions around the world, including international card payments as well as local payment methods such as e-wallet, online bank transfer, etc.,We provides you with different adapted payment methods with multiple transaction and settlement currencies to help your business expand into new markets."
-    ,
-    "products_global_acquiring": "Global Acquiring"
+
   },
   "risk": {
     "title": "Intelligent Risk Control Engine",
@@ -72,11 +71,11 @@
     "step2": "Complete onboarding information",
     "step3": "Technical Integration",
 
-    "step4": "Collecting funds&Withdrawal"
+    "step4": "Collecting funds&Withdrawal&Payout"
   },
   "subscription":{
     "title":"Subscribe to our newsletter",
-    "desc": "Enter your email to stay informed of updates from Beyounger. You can unsubscribe at any time and your email address will remain confidential.",
+    "desc": "Enter your email to stay informed of updates from Easyloon. You can unsubscribe at any time and your email address will remain confidential.",
     "btn": "Subscribe"
   }
 }
