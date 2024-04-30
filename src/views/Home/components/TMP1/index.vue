@@ -301,11 +301,11 @@ export default {
 
         .charts-left {
           width: 100%;
-          ul {
+          ul.ul {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            li {
+            li.li {
               width: 50%;
               height: 40px;
               margin-bottom: 10px;
@@ -325,6 +325,8 @@ export default {
                 }
                 .subtitle {
                   display: none;
+                }
+                ul.detail-list{
                 }
                 .el-icon-arrow-right {
                 }

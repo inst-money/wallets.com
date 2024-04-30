@@ -57,6 +57,9 @@ export default {
 }
 
 .text-gradient {
+  @media (max-width: 767px) {
+    font-size: 36px;
+    }
   font-size: 48px;
   font-weight: bold;
   // --hue: 400;
