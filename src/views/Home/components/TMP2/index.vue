@@ -1,8 +1,8 @@
 <template>
-  <div class="global-account" data-v-088b8f2a="" data-v-3242de3c="">
-    <div class="container" data-v-088b8f2a="">
-      <h1 class="content-title" data-v-088b8f2a="">一个账户，解锁全球</h1>
-      <div class="show-chart" data-v-088b8f2a="">
+  <div class="global-account">
+    <div class="container">
+      <h1 class="content-title">Multi-currency Wallet</h1>
+      <div class="show-chart">
         <div class="charts-left charts-left-white">
           <ul>
             <li :class="{ active: currentIndex == 0 }" @click="activeIt(0)">
@@ -59,12 +59,12 @@ export default {
         {
           key: 0,
           title: 'Multi-currency Wallet',
-          desc: `无论客户从事国际化的电商平台业务、独立站业务、数字化文娱类等业务，还是希望进行收款、付款、汇兑，只需一个“Easyloon MULTI-CURRENCY ACCOUNT， 全球生意皆可一手掌控，无需再忍受银行繁杂的业务流程及高昂的手续费用。`
+          desc: `We helps you avoid costly international bank or wire transfers, or a multi-step process of withdrawing, converting, and redepositing the payment. It’s all about making sure you have the currency you need when your business needs it the most.`
         },
         {
           key: 1,
           title: 'FX Management',
-          desc: 'Easyloon提供了基于全面API的全球FX量化交易引擎，支持即期、保险汇率等多种出色灵活的汇率管理产品，无惧外汇波动风险，满足客户全方位的汇兑诉求，使我们的客户可以在世界各地随时随地进行外汇交易。'
+          desc: 'You can get competitive foreign exchange rates from us to better manage your forex transactions.'
         }
       ]
     }

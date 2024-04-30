@@ -11,8 +11,8 @@
     "login": "Sign in",
     "signup": "Sign up",
      "contact_us": "Contact us",
-    "title": "Global Acquiring",
-    "desc": "We covers dozens of payment methods in most countries and regions around the world, including international card payments as well as local payment methods such as e-wallet, online bank transfer, etc.,We provides you with different adapted payment methods with multiple transaction and settlement currencies to help your business expand into new markets."
+    "title": "Global Collection Service & Payout",
+    "desc": "Global Collection services cover up to 50 marketplaces. We provide tailor-made solutions for our clients based on diversified business scenarios."
 
   },
   "risk": {
@@ -66,12 +66,12 @@
     "good03": "Cooperation with local card brand in France, Argentina, Brazil"
   },
   "use_step": {
-    "title": "ONLY 4 STEPS, EASY TO GET START",
+    "title": "ONLY 3 STEPS, EASY TO GET START",
     "step1": "Register your account",
     "step2": "Complete onboarding information",
     "step3": "Technical Integration",
 
-    "step4": "Collecting funds&Withdrawal&Payout"
+    "step4": "Collecting funds & Withdrawal & Payout"
   },
   "subscription":{
     "title":"Subscribe to our newsletter",

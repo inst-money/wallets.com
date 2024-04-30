@@ -1,27 +1,23 @@
 
 export const enList = [
   {
-    title: `Support for multiple currencies
-`,
-    desc: `    Covering 71 countries and regions worldwide,
-    266 payment methods, 50+ currencies.`
+    title: `Support for multiple currencies`,
+    desc: `Covering 71 countries and regions worldwide, 50+ currencies.`
   },
   {
-    title: 'Easy integration, quick deployment',
-    desc: `
-    Offering multiple integration methods such as API/SDK/plugins, ensuring high availability and stability of the interface.`
+    title: 'Higher Efficiency',
+    desc: `Sign up a Pyvio account in minutes with 0 fee; Collection+Payout can be completed in 1 business day.`
   },
   {
-    desc: `
-    Implementing comprehensive and multi-dimensional real-time transaction monitoring through risk strategies and data models to protect against fraud.`,
-    title: 'Providing anti-fraud services'
+    title: `Better Security`,
+    desc: 'Bank level security is guaranteed by Pyvio’s powerful payment network and financial institution partership.'
   },
   {
-    title: 'Customer-centric',
-    desc: `Equipping each customer with a professional service team,
-    Analyzing transaction data to identify areas of customer growth.`
+    title: 'Lower Cost',
+    desc: `Lower payment cost, higher transparency on FX coversion Fee - lower than average.`
   }
 ]
+
 export const zhList = [
   {
     title: '支持多币种',

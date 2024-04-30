@@ -19,11 +19,6 @@
               <img class="right__item__arrow" src="@/assets/images/home/arrow-down.png" alt="">
             </div>
             <div class="right__item">
-              <img class="right__item__img" src="@/assets/images/home/payment3.png" alt="">
-              <div class="right__item__content">{{ $t("use_step.step3") }}</div>
-              <img class="right__item__arrow" src="@/assets/images/home/arrow-down.png" alt="">
-            </div>
-            <div class="right__item">
               <img class="right__item__img" src="@/assets/images/home/payment4.png" alt="">
               <div class="right__item__content">{{ $t("use_step.step4") }}</div>
             </div>
