@@ -251,6 +251,7 @@ export default {
       padding: 0 6.66vw;
       .content-title {
         margin-bottom: 33px;
+        font-size: 36px;
       }
 
       .show-chart {

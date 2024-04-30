@@ -9,10 +9,8 @@
       <numberAnimate />
     </div>
   </div>
-
 </template>
 <script>
-
 import * as echarts from 'echarts'
 import bank1 from '@/assets/images/bank1.png'
 import bank2 from '@/assets/images/bank2.png'
@@ -56,8 +54,7 @@ export default {
         this.resize()
       })
       let option = {}
-      echarts.registerMap('WORLD', worldJson, {
-      })
+      echarts.registerMap('WORLD', worldJson, {})
       option = {
         tooltip: {},
         dataRange: {
@@ -79,7 +76,6 @@ export default {
           mapType: 'world'
         },
         series: [
-
           {
             type: 'map',
             mapType: 'WORLD',
@@ -91,7 +87,9 @@ export default {
                 if (!params.data || !params.data.selected) {
                   return ''
                 }
-                const imgLogo = params?.data?.logo ? ` <img   class="flag" src='${params?.data?.logo}'>` : ''
+                const imgLogo = params?.data?.logo
+                  ? ` <img   class="flag" src='${params?.data?.logo}'>`
+                  : ''
                 return [
                   `<div style="" class="bank-box" >  
 
@@ -171,12 +169,14 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang="scss">
 #rightTwoCharts {
-
+  @media screen and (max-width: 500px) {
+    padding-top: 60px;
+    padding-bottom: 0px;
+  }
   padding-top: 200px;
   // padding-bottom: 200px;
   width: 100%;
@@ -205,7 +205,9 @@ export default {
       text-align: center;
       color: #13151a;
       margin-bottom: 84px;
-
+      @media screen and (max-width: 500px) {
+        margin-bottom: 0px;
+      }
     }
 
     .info {
@@ -235,12 +237,19 @@ export default {
 }
 
 @media (max-width: 1350px) {
-      #demoMap{
-        width:  80%;
-      }
+  #demoMap {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  #demoMap {
+    width: 80%;
+    height: 450px;
+    margin-top: -120px;
+  }
 }
 .bank-box {
-  font-family: 'Medium';
+  font-family: "Medium";
   font-style: normal;
   font-weight: 600;
   padding: 18px 16px;
@@ -263,12 +272,12 @@ export default {
     }
 
     .text {
-      font-family: 'Medium';
+      font-family: "Medium";
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
-      color: #13151A;
+      color: #13151a;
     }
   }
 }
@@ -290,7 +299,6 @@ export default {
       width: 62px;
       // height: 32px;
       margin: 0 14px;
-
     }
 
     .bank2 {
@@ -298,7 +306,6 @@ export default {
       // height: 32px;
       margin: 0 14px;
     }
-
   }
-
-}</style>
+}
+</style>

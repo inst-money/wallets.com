@@ -7,17 +7,17 @@
           <ul class="ul">
             <li class="li" :class="{ active: currentIndex == 1 }" @click="activeIt(1)">
               <div class="icon">
-                <img src="@/assets/global-payment/shopping-cart.png" />
+                <img src="@/assets/global-payment/shopping-cart.png">
               </div>
               <div class="describe">
                 <h3 class="title">Collections</h3>
-                <h4 class="subtitle">Global Collection Service</h4>
+                <h4 class="subtitle">Global Collection Account</h4>
               </div>
               <i class="el-icon-arrow-right" />
             </li>
             <li class="li" :class="{ active: currentIndex == 3 }" @click="activeIt(3)">
               <div class="icon">
-                <img src="@/assets/global-payment/money.png" />
+                <img src="@/assets/global-payment/money.png">
               </div>
               <div class="describe">
                 <h3 class="title">Payouts</h3>
@@ -27,7 +27,7 @@
             </li>
           </ul>
           <h3 class="detail-title">{{ currentDesc.title }}</h3>
-          <p class="detail" v-if="currentDesc.desc">{{ currentDesc.desc }}</p>
+          <p v-if="currentDesc.desc" class="detail">{{ currentDesc.desc }}</p>
           <ul class="detail-list">
             <li v-for="item in currentDesc.desc_list" :key="item.title">
               <h3 class="detail-list-title">{{ item.title }}</h3>
@@ -39,12 +39,12 @@
         <div class="charts-right">
           <div class="img-box" :class="{ 'img-box__show': currentIndex == 1 }">
             <div class="rise-up">
-              <img src="@/assets/global-payment/demo22.png" />
+              <img src="@/assets/global-payment/demo22.png">
             </div>
           </div>
           <div class="img-box" :class="{ 'img-box__show': currentIndex == 3 }">
             <div class="rise-up">
-              <img src="@/assets/global-payment/demo3.png" />
+              <img src="@/assets/global-payment/demo3.png">
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
 
 <script>
 export default {
-  name: "TMP1",
+  name: 'TMP1',
   data() {
     return {
       imgBoxList: [],
@@ -63,60 +63,60 @@ export default {
       descList: [
         {
           key: 1,
-          title: "Global Collection Service",
+          title: 'Global Collection Account',
           // desc: "跨境电商平台收款，一站式解决。Easyloon支持80%主流平台及币种，多币种多平台多店铺，一站式管理，化零为整。",
           desc_list: [
             {
-              title: "Higher Efficiency",
-              desc: `Sign up an account in minutes with 0 fee; Collection+Payout can be completed in 1 business day.`,
+              title: 'Higher Efficiency',
+              desc: `Sign up an account in minutes with 0 fee; Collection+Payout can be completed in 1 business day.`
             },
             {
               title: `Better Security`,
-              desc: "Bank level security is guaranteed by our powerful payment network and financial institution partership.",
+              desc: 'Bank level security is guaranteed by our powerful payment network and financial institution partership.'
             },
             {
-              title: "Lower Cost",
-              desc: `Lower payment cost, higher transparency on FX coversion Fee - lower than average.`,
-            },
-          ],
-        },
-        {
-          key: 3,
-          title: "Global Payouts",
-          // desc: "Easyloon充分运用国际金融技术及科技能力形成强大的支付网络，遍布全球150+国家及地区。使用Easyloon付款产品可以让您快速安全地向全球供应商、代理商或服务商等全球各地的交易方支付款项；让您无论何时何地，无缝链接当地清算网络，支持B2C/B2B，最快可支持实时到账。",
-          desc_list: [
-            {
-              desc: "With our product, you can make payments seamlessly to your local suppliers or your overseas employees.",
-              title: ""
-            },
-            {
-              desc: "We help you to transfer funds or to the overseas local e-wallets.",
-              title: ""
-            },
-            {
-              desc: "We speed up your funds movement with local payment ecosystem.",
-              title: ""
-            },
-            {
-              desc: "With our automated payment infrastructure, we make your payments faster and cheaper.",
-              title: ""
+              title: 'Lower Cost',
+              desc: `Lower payment cost, higher transparency on FX coversion Fee - lower than average.`
             }
           ]
         },
-      ],
-    };
+        {
+          key: 3,
+          title: 'Global Payouts',
+          // desc: "Easyloon充分运用国际金融技术及科技能力形成强大的支付网络，遍布全球150+国家及地区。使用Easyloon付款产品可以让您快速安全地向全球供应商、代理商或服务商等全球各地的交易方支付款项；让您无论何时何地，无缝链接当地清算网络，支持B2C/B2B，最快可支持实时到账。",
+          desc_list: [
+            {
+              desc: 'With our product, you can make payments seamlessly to your local suppliers or your overseas employees.',
+              title: ''
+            },
+            {
+              desc: 'We help you to transfer funds or to the overseas local e-wallets.',
+              title: ''
+            },
+            {
+              desc: 'We speed up your funds movement with local payment ecosystem.',
+              title: ''
+            },
+            {
+              desc: 'With our automated payment infrastructure, we make your payments faster and cheaper.',
+              title: ''
+            }
+          ]
+        }
+      ]
+    }
   },
   computed: {
     currentDesc() {
-      return this.descList.find((item) => item.key === this.currentIndex) || {};
-    },
+      return this.descList.find((item) => item.key === this.currentIndex) || {}
+    }
   },
   methods: {
     activeIt(index) {
-      this.currentIndex = index;
-    },
-  },
-};
+      this.currentIndex = index
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -225,7 +225,7 @@ export default {
           .detail-list-title{
             font-weight: bold;
             color: #fff;
-            font-size: 20px;   
+            font-size: 20px;
           }
           .detail-list-subtitle{
             margin-top: 5px;
@@ -292,6 +292,7 @@ export default {
       padding: 0 6.66vw;
       .content-title {
         margin-bottom: 33px;
+        font-size: 36px;
       }
 
       .show-chart {
