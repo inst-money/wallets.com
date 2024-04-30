@@ -3,7 +3,7 @@
     <div id="rightTwoCharts">
       <div class="top-banner">
         <div class="title">{{ $t("map.title") }}</div>
-        <div class="info">{{ $t("map.desc") }}</div>
+        <!-- <div class="info">{{ $t("map.desc") }}</div> -->
       </div>
       <div id="demoMap" ref="demoMap" />
       <numberAnimate />
@@ -206,7 +206,8 @@ export default {
       line-height: 53px;
       text-align: center;
       color: #13151a;
-      margin-bottom: 24px;
+      margin-bottom: 84px;
+
     }
 
     .info {

@@ -22,7 +22,7 @@
         <img src="@/assets/b64/b.png">
       </div>
     </div>
-    <div class="line-border" />
+    <!-- <div class="line-border" />
     <div class="data-item">
       <div class="text">
         <span class="data">
@@ -32,7 +32,7 @@
         <span class="info">Fiat payment channels</span>
         <img src="@/assets/b64/c.png">
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
