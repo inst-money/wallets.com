@@ -11,7 +11,7 @@
               </div>
               <div class="describe">
                 <h3 class="title">Collections</h3>
-                <h4 class="subtitle">Global Collection Service</h4>
+                <h4 class="subtitle">Global Collection Account</h4>
               </div>
               <i class="el-icon-arrow-right" />
             </li>
@@ -63,7 +63,7 @@ export default {
       descList: [
         {
           key: 1,
-          title: "Global Collection Service",
+          title: "Global Collection Account",
           // desc: "跨境电商平台收款，一站式解决。Easyloon支持80%主流平台及币种，多币种多平台多店铺，一站式管理，化零为整。",
           desc_list: [
             {
@@ -292,6 +292,7 @@ export default {
       padding: 0 6.66vw;
       .content-title {
         margin-bottom: 33px;
+        font-size: 36px;
       }
 
       .show-chart {
