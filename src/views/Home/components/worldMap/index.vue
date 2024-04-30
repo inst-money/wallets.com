@@ -101,10 +101,8 @@ export default {
                       <div  class="text">${params.name}</div>  
                     </div>
                     <div class="pay"> 
-                      <div  class="bank">   <img   class="bank1" src='${bank1}'/></div>
-                      <div  class="bank">   <img class="bank2" src='${bank2}'/> </div>
-                    
-                     
+
+                                     
                   </div>
                     </div>`
                 ].join('<br>')
