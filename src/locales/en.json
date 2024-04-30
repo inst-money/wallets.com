@@ -42,7 +42,8 @@
   "footer": {
     "products": {
       "name": "Products",
-      "global_acquiring":"Global Acquiring"
+      "global_acquiring1":" Global Collection Service",
+      "global_acquiring2":" Global Payout"
     },
     "company": {
       "name": "Company",

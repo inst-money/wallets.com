@@ -6,11 +6,11 @@ export const enList = [
   },
   {
     title: 'Higher Efficiency',
-    desc: `Sign up a Pyvio account in minutes with 0 fee; Collection+Payout can be completed in 1 business day.`
+    desc: `Sign up an account in minutes with 0 fee; Collection+Payout can be completed in 1 business day.`
   },
   {
     title: `Better Security`,
-    desc: 'Bank level security is guaranteed by Pyvio’s powerful payment network and financial institution partership.'
+    desc: 'Bank level security is guaranteed by our powerful payment network and financial institution partership.'
   },
   {
     title: 'Lower Cost',

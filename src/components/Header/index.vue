@@ -16,11 +16,39 @@
               {{ $t('nav.security') }}
             </a>
           </LinkBox>
-          <LinkBox class="terms__term">
+          <!-- <LinkBox class="terms__term">
             <a class="quickBtn cardBtn headerTopText" :class="{ isTrue: isBus }">
               {{ $t('nav.products') }}
             </a>
-          </LinkBox>
+          </LinkBox> -->
+          <a-popover placement="bottom" arrow-point-at-center overlay-class-name="custom—popover">
+            <a class="color_f headerTopText" :class="{ isTrue: isPro }" @click="(e) => e.preventDefault()">
+              {{ $t('nav.products') }}
+              <img class="down_icon" src="@/assets/pre/down_icon.svg" alt="">
+            </a>
+            <template #content>
+              <div class="tag-content tag-content-row">
+                <div class="tag-container">
+                  <div class="nav-menu-item-container">
+                    <!-- <img src="@/assets/pre/about-us.svg" alt="fast card"> -->
+                    <div class="nav-menu-item-right">
+                      <h4>{{ $t("footer.products.global_acquiring1") }}</h4>
+                      <div>{{ $t("footer.products.global_acquiring1") }}</div>
+                      <!-- <div>About Us</div> -->
+                    </div>
+                  </div>
+                  <div class="nav-menu-item-container">
+                    <!-- <img src="@/assets/pre/about-us.svg" alt="fast card"> -->
+                    <div class="nav-menu-item-right">
+                      <h4>{{ $t("footer.products.global_acquiring2") }}</h4>
+                      <div>{{ $t("footer.products.global_acquiring2") }}</div>
+                      <!-- <div>About Us</div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </a-popover>
 
           <LinkBox class="terms__term">
             <a class="quickBtn cardBtn headerTopText" :class="{ isTrue: isBus }">
