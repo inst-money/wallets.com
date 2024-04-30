@@ -39,7 +39,7 @@
         <div class="charts-right">
           <div class="img-box" :class="{ 'img-box__show': currentIndex == 1 }">
             <div class="rise-up">
-              <img src="@/assets/global-payment/demo2.png" />
+              <img src="@/assets/global-payment/demo22.png" />
             </div>
           </div>
           <div class="img-box" :class="{ 'img-box__show': currentIndex == 3 }">
